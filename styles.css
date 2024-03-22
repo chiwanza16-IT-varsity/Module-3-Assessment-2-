@@ -1,0 +1,611 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* ===== CUSTOM STYLING ======== */
+:root {
+  --primary-color: #42200b;
+  --secondary-color: #ffc135;
+  --tertiary-color: #df1c1c;
+  --text-dark: #212529;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font-1: "Alfa Slab One", serif;
+  --header-font-2: "Bebas Neue", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 10rem 1rem;
+}
+
+.section__header {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: var(--header-font-1);
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 3.75rem;
+  text-shadow: 2px 2px var(--secondary-color);
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  color: var(--white);
+  background-color: var(--tertiary-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ===== HEADER AND NAVIGATION ======== */
+.header {
+  background-image: url("assets/images/header-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.nav__header {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo img {
+  max-width: 250px;
+}
+
+.nav__links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+
+.nav__links a {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 100px;
+  overflow: hidden;
+}
+
+.header__image img {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.header__content {
+  justify-self: baseline;
+}
+
+.header__content h2 {
+  max-width: 400px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-family: var(--header-font-2);
+  color: var(--primary-color);
+  border: 2px dashed var(--primary-color);
+  text-align: center;
+}
+
+
+.header__content h1 {
+  font-size: 4.5rem;
+  font-weight: 500;
+  font-family: var(--header-font-1);
+  color: var(--primary-color);
+  line-height: 3.5rem;
+  text-shadow: 2px 2px var(--white);
+}
+
+.header__content h1 span {
+  font-size: 3rem;
+}
+
+/* ===== MENU / CATEGORIES ======== */
+
+.order__container h3 {
+  max-width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: var(--header-font-2);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.order__container .section__header {
+  margin-bottom: 1rem;
+}
+
+.order__container .section__description {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.order__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1rem;
+}
+
+.order__card {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.order__card:hover {
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.order__card img {
+  max-width: 250px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.order__card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.order__card p {
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.75rem;
+}
+
+/* ===== RESERVATION AND FOOTER ======== */
+
+.reservation {
+  position: relative;
+  transform: translateY(-140px);
+}
+
+.reservation__container h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: var(--header-font-2);
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.reservation__container form {
+  max-width: 600px;
+  margin-inline: auto;
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.reservation__container input {
+  padding: 1rem 1rem;
+  outline: none;
+  border: 1px solid var(--text-dark);
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.reservation__container input::placeholder {
+  color: var(--text-dark);
+}
+
+
+.footer {
+  background-image: url("assets/images/footer-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -200px;
+}
+
+.footer__logo img {
+  max-width: 250px;
+}
+
+.footer__content {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.footer__content p {
+  font-weight: 5500;
+  color: var(--white);
+  line-height: 1.75rem;
+}
+
+.footer__links {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__links li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.footer__links li span {
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.footer__socials {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.footer__socials a:hover {
+  color: var(--secondary-color);
+}
+
+.footer__bar {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--white);
+  text-align: center;
+}
+
+/* ========== MEALS PAGE ========== */
+
+#meals {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+/* ===== MEALS PAGE MENU ===== */
+
+.meals-list a{
+  text-decoration: none;
+}
+
+.meals-list-item {
+  border: 5px solid var(--text-dark);
+  margin: 20px 180px;
+  padding: 20px;
+  text-align: center;
+}
+
+.meals-list-item h1 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--text-dark);
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.meals-list-item i {
+  float: right;
+  color: var(--text-dark);
+  padding-right: 20px;
+  padding-top: 25px;
+}
+
+.meals-list-item p {
+  font-size: 25px;
+  font-style: italic;
+  color: var(--tertiary-color);
+  margin-top: -7px;
+  padding-left: 10px;
+}
+
+.back {
+  font-size: 25px;
+  padding-left: 900px;
+  color: var(--text-dark);
+}
+
+/* ===== INDIVIDUAL MEALS ======== */
+.order {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.order h3 {
+  font-size: 35px;
+  padding-bottom: 30px;
+
+}
+
+.order p {
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 18px;
+}
+
+.order img {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.order .btn {
+  font-size: 18px;
+  margin: 20px;
+}
+
+.order i {
+  font-size: 25px;
+}
+
+.order span {
+  font-size: 30px;
+}
+
+.extras {
+  border: 5px dashed var(--text-dark);
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 50px;
+}
+
+.extras label {
+  line-height: 35px; 
+  font-size: 20px; 
+}
+
+.extras textarea {
+  padding: 25px;
+  outline: none;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* ===== THANKYOU PAGE ======== */
+.container-thanks {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container-thanks .btn {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 50px;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.popup i {
+  font-size: 200px;
+  color: var(--tertiary-color);
+  background-color: var(--text-dark);
+  border-radius: 50%;
+  margin-top: -120px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.container-thanks .popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 10px;
+}
+
+.popup {
+  width: 400px;
+  background: var(--white);
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px 50px;
+}
+
+/* ===== RESPONSIVE LAYOUT ======== */
+@media only screen and (max-width: 635px) {
+  
+  .order__grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    padding: 2rem .5rem;
+    display: flex;
+  }
+
+  .nav__links {
+    position: static;
+    padding: 0;
+    justify-content: center;
+    transform: translateX(-26px);
+  }
+ 
+  .nav__logo img {
+    display: none;
+  }
+
+  .header__container {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+
+  .header__image {
+    grid-area: 1;
+  }
+
+  .section__container {
+    padding-top: 45px;
+  }
+
+  .order h3 {
+    padding-top: 10px;
+    font-size: 25px;
+    padding-bottom: 10px;
+    text-decoration: none;
+  }
+
+  .meals-list-item p {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--tertiary-color);
+    margin-top: -7px;
+  }
+
+  #meals:not(:nth-child(1)) {
+    padding-top: 25px;
+    padding-bottom: 75px;
+  }
+
+  .meals-list-item h1 {
+    font-size: 25px;
+  }
+ 
+  .meals-list-item i {
+    padding-right: 5px;
+    padding-top: 25px;
+  }
+
+  .extras {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 30px;
+  }
+
+  .popup i {
+    font-size: 100px;
+    border-radius: 50%;
+    margin-top: -10px;
+  }
+
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  .nav__logo img {
+    max-width: 150px;
+  }
+
+  #meals {
+    width: 80%;
+    margin: auto;
+  }
+
+  .meals-list-item {
+    margin: 20px 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .order img {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+  }
+
+  .extras {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 80px;
+  }
+
+  .back {  
+    padding-left: 255px; 
+  }
+
+}
+ 
+@media only screen and (max-width: 630px) {
+
+  #meals {
+    width: 100%;
+    margin: auto;
+  }
+
+  .meals-list-item {
+    margin: 20px 10px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .extras {
+    padding: 20px;
+  }
+
+  .order .btn {
+    font-size: 18px;
+  }
+
+  .back {  
+    padding-left: 15px; 
+  }
+  
+} 
+
